@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Schema Validation</title>
+</head>
+<body>
+    <h1>Student Data Validation Example</h1>
+    
+    <p id="result"></p>
+
+    <script type="module">
+        import Ajv from "https://cdn.skypack.dev/ajv@8.6.2";
+
+        const studentSchema = {
+            "type": "object",
+            "properties": {
+                "id": { "type": "integer" },
+                "firstName": { "type": "string" },
+                "lastName": { "type": "string" },
+                "age": { "type": "integer" },
+                "email": { "type": "string" },
+                "courses": { "type": "array", "items": { "type": "string" } }
+            },
+            "required": ["id", "firstName", "lastName", "age", "email"]
+        };
+
+
+        const ajv = new Ajv();
+        
+        const validate = ajv.compile(studentSchema);
+
+        const studentData = {
+            "id": 1,
+            "firstName": "John",
+            "lastName": "Doe",
+            "age": 20,
+            "email": "john.doe@example.com",
+            "courses": ["Math", "History"]
+        };
+        const resultElement = document.getElementById("result");
+
+        const valid = validate(studentData);
+        
+        if (valid) {
+            resultElement.textContent = "Data is valid according to the schema.";
+            resultElement.style.color = "green";  
+        } else {
+            resultElement.textContent = "Data is not valid:";
+            resultElement.style.color = "red";   
+            const errors = validate.errors.map(error => `${error.dataPath} ${error.message}`).join(', ');
+            resultElement.textContent += " " + errors;
+        }
+    </script>
+</body>
+</html>
