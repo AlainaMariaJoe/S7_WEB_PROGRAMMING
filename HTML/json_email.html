@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Schema Validation</title>
+</head>
+<body>
+    <h1>Validating Email Using JSON Schema</h1>
+    <p id="result"></p> 
+
+    <script>
+        const schema = {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+                }
+            },
+            "required": ["email"]
+        };
+
+        const jsonData = {
+            "email": "alaina8@gmail.com" 
+        };
+
+        function validateJSON(schema, data) {
+            const regex = new RegExp(schema.properties.email.pattern);
+            const isValid = regex.test(data.email);
+            if (isValid) {
+                document.getElementById("result").innerText = "Valid email address: " + data.email;
+            } else {
+                document.getElementById("result").innerText = "Invalid email address: " + data.email;
+            }
+        }
+        validateJSON(schema, jsonData);
+    </script>
+</body>
+</html>
