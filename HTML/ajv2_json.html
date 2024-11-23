@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Schema Validation</title>
+</head>
+<body>
+    <h1>JSON Schema Validation Example</h1>
+    <div id="result"></div>
+
+    <script type="module">
+        import Ajv from "https://cdn.skypack.dev/ajv@8.6.2";
+
+        const ajv = new Ajv();
+        const schema = {
+            type: "array",  // validating an array of objects
+            items: {  
+                type: "object",
+                properties: {
+                    name: { type: "string" },
+                    age: { type: "number", minimum: 18 }
+                },
+                required: ["name", "age"]
+            }
+        };
+
+        const validate = ajv.compile(schema);
+
+        const data = [
+            { name: "John", age: 25 },
+            { name: "Alice", age: 13 },  //  invalid because age < 18
+            { name: "Bob", age: 30 }
+        ];
+
+        const isValid = validate(data);
+        console.log(isValid);  
+        const resultElement = document.getElementById("result");
+
+        if (isValid) {
+            resultElement.innerHTML = "Data is valid according to the schema";
+            resultElement.style.color = "green";
+        } else {
+            resultElement.innerHTML = 'Data is not valid: ';
+            const errors = validate.errors.map(error => `${error.dataPath} ${error.message}`).join(', ');
+            resultElement.innerHTML += "<br>" + errors;
+            resultElement.style.color = "red";
+        }
+    </script>
+</body>
+</html>
