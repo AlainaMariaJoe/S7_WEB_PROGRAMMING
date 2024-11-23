@@ -1,0 +1,19 @@
+
+a {
+    background-color: red; 
+    font-style: italic;
+    color: white; 
+    text-decoration: none;
+}
+
+
+ul {
+    font-family: 'Times New Roman', serif; 
+}
+
+
+body {
+    background-image: url('Ocean.gif'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}

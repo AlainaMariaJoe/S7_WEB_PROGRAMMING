@@ -1,0 +1,49 @@
+/* Set the background image and margin for the page */
+body {
+    background-image: url('Flower.png'); /* Set background image */
+    background-size: cover; /* Ensure the background image covers the entire page */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    margin: 0; /* Remove default margin */
+}
+
+/* Set background color for hover and active link states */
+a:hover,
+a:active {
+    background-color: green;
+    color: white; /* Optional: Set text color to white for better contrast */
+    text-decoration: none; /* Optional: Remove underline from hyperlinks */
+}
+
+/* Set list style for unordered lists to square */
+ul {
+    list-style-type: square;
+}
+
+/* Set borders for table */
+table {
+    border-left: 2px dashed black;
+    border-right: 2px dashed black;
+    border-top: 3px double black;
+    border-bottom: 3px double black;
+    border-collapse: collapse; /* Ensure borders do not double up */
+    width: 100%; /* Optional: Ensure the table takes up the full width */
+}
+
+td {
+    padding: 8px; /* Optional: Add padding inside table cells */
+    border: 1px solid black; /* Optional: Add a solid border around table cells */
+}
+.paragraph-style1 {
+    color: blue; /* Text color blue */
+    text-align: right; /* Right align text */
+    text-decoration: underline; /* Underline text */
+    font-style: italic; /* Italicize text */
+    word-spacing: 2cm; /* Spacing between words */
+}
+
+/* Style 2 - Yellow background, dashed blue border, with 1.5cm padding */
+.paragraph-style2 {
+    background-color: yellow; /* Background color yellow */
+    border: 2px dashed blue; /* Dashed blue border */
+    padding: 1.5cm; /* Padding of 1.5cm */
+}

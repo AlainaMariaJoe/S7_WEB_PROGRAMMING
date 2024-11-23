@@ -1,0 +1,15 @@
+/* Style 1 - Blue color, right aligned, underlined, italicized, with 2cm word spacing */
+.paragraph-style1 {
+    color: blue; /* Text color blue */
+    text-align: right; /* Right align text */
+    text-decoration: underline; /* Underline text */
+    font-style: italic; /* Italicize text */
+    word-spacing: 2cm; /* Spacing between words */
+}
+
+/* Style 2 - Yellow background, dashed blue border, with 1.5cm padding */
+.paragraph-style2 {
+    background-color: yellow; /* Background color yellow */
+    border: 2px dashed blue; /* Dashed blue border */
+    padding: 1.5cm; /* Padding of 1.5cm */
+}

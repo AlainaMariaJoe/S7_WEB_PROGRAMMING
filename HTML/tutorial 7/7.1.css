@@ -1,0 +1,18 @@
+
+body {
+    background-image: url('boat.jpeg');
+    background-size: cover;
+    margin: 3%;
+    border: 2px dotted black; 
+}
+
+
+a:hover,
+a:active {
+    background-color: yellow;
+}
+
+
+ol {
+    list-style-type: lower-alpha;
+}
