@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cube of Number</title>
     <style>
-        /* Styling for the result */
         #result {
             font-weight: 400;
             color: green;
@@ -18,21 +17,15 @@
     <p id="result"></p>
 
     <script>
-        // Prompt user to enter a number
         let number = prompt("Please enter a number:");
-
-        // Convert the input to a number
         number = parseFloat(number);
 
-        // Check if the input is a valid number
         if (isNaN(number)) {
-            // If the input is not a valid number, show an error message
             alert("Please enter a valid number.");
         } else {
             // Calculate the cube of the number
             let cube = Math.pow(number, 3);
 
-            // Display the result with styling
             document.getElementById("result").innerHTML= "Cube of " + number + " is: "+ cube;
         }
     </script>
