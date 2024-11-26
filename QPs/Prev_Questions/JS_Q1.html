@@ -15,25 +15,22 @@
   <h2>Event Handler Example</h2>
   <p id="message">Welcome</p>
   
-
   <button id="changeButton">Click</button>
   
   <script>
-    // Method 1: Using the HTML onclick attribute (Inline approach)
+    // Method 1: 
     document.getElementById("changeButton").onclick = function() {
       changeMessage();
     };
     
-    // Method 2: Using JavaScript DOM method addEventListener (Preferred approach)
-
+    // Method 2: 
     document.getElementById("changeButton").addEventListener("click", function() {
       changeMessage();
     });
 
     function changeMessage() {
-  
       const messageParagraph = document.getElementById("message");
-      messageParagraph.innerHTML = "<b>Hello from JavaScript</b>"; 
+      messageParagraph.innerHTML = "<b> How you doing? </b>"; 
     }
   </script>
 
