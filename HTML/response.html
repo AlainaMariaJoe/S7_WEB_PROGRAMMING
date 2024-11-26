@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media Query Example</title>
   <style>
-    /* Default styles (apply to all devices) */
     body {
       font-family: Arial, sans-serif;
       text-align: center;
@@ -13,8 +12,7 @@
       padding: 20px;
       background-color: white; /* Default */
     }
-
-    /* Small screens (<576px) */
+    
     @media (max-width: 575px) {
       body {
         background-color: lightblue;
@@ -22,7 +20,7 @@
       }
     }
 
-    /* Medium screens (576px–767px) */
+
     @media (min-width: 576px) and (max-width: 767px) {
       body {
         background-color: lightgreen;
@@ -30,7 +28,7 @@
       }
     }
 
-    /* Large screens (≥768px) */
+
     @media (min-width: 768px) {
       body {
         background-color: lavender;
@@ -38,7 +36,7 @@
       }
     }
 
-    /* Orientation-specific styles */
+
     @media (orientation: landscape) {
       body {
         border: 5px solid black;
@@ -48,6 +46,6 @@
 </head>
 <body>
   <h1>Responsive Design with Media Queries</h1>
-  <p>Resize the window or change orientation to see the effect!</p>
+  <p>Resize the window or change orientation to see the effect</p>
 </body>
 </html>
