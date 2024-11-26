@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Relative and Absolute Positioning Example</title>
+  <style>
+    .container {
+      position: relative;  /* Container is the reference point for absolute positioning */
+      width: 400px;
+      height: 400px;
+      background-color: lightgrey;
+    }
+
+    .box1 {
+      background-color: red;
+      width: 100px;
+      height: 100px;
+      position: relative;  /* Moves Box 1 relative to its normal flow */
+      top: 30px;  /* Moves it 30px from the top */
+      left: 50px;  /* Moves it 50px from the left */
+    }
+
+    .box2 {
+      background-color: blue;
+      width: 100px;
+      height: 100px;
+       /* Moves Box 2 150px from the left of the container */
+    }
+
+    .box3 {
+      background-color: green;
+      width: 100px;
+      height: 100px;
+      position: absolute;  /* Positioned absolutely relative to the .container */
+      top: 50px;  /* Moves Box 3 50px from the top of the container */
+      left: 250px;  /* Moves Box 3 250px from the left of the container */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box1">Box 1 (Relative)</div>
+  <div class="box2">Box 2 (Absolute)</div>
+  <div class="box3">Box 3 (Absolute)</div>
+</div>
+
+</body>
+</html>

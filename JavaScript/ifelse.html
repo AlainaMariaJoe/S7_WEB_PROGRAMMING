@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if...else Statement Example</title>
+</head>
+<body>
+    <h2>Check Grade</h2>
+    <button onclick="checkGrade()">Check your Grade</button>
+    <p id="gradeCheck"></p>
+
+    <script type="text/javascript">
+        function checkGrade() {
+            grade=prompt("Enter your grade: ");
+            grade=Number(grade)
+            if (grade >= 60) {
+                document.getElementById("gradeCheck").innerHTML = "You passed!";
+            } else {
+                document.getElementById("gradeCheck").innerHTML = "You failed!";
+            }
+        }
+    </script>
+</body>
+</html>

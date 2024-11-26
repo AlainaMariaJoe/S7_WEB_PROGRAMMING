@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Links Collection Details</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>Links-Collection-length</legend>
+      <a href="https://www.google.com">Google</a>&nbsp;&nbsp;&nbsp;
+      <a href="https://www.bing.com">Bing</a>&nbsp;&nbsp;&nbsp;
+      <a href="https://www.ebay.com">E-bay</a>&nbsp;&nbsp;&nbsp;
+      <a href="https://www.sjcetpalai.ac.in">SJCET</a><br/><br/>
+      <input type="button" value="Get Links" onclick="getLinks()">
+      <div id="divDisplay"></div>
+    </fieldset>
+  </form>
+
+  <script>
+    // Get the element where we will display the results
+    var divDisplay = document.getElementById("divDisplay");
+
+    // Function that runs when the button is clicked
+    function getLinks() {
+      // Get the links collection from the document object
+      const linksCollection = document.links;
+
+      // Get the total number of links
+      var links = document.links.length;
+
+      // Display the total number of links in the div
+      divDisplay.innerHTML = 'Total Links: ' + links + '<br>';
+
+      // Loop through all the links and display their details
+      for (let i = 0; i < linksCollection.length; i++) {
+        // Display the link URL
+        divDisplay.innerHTML += "Link URL: " + linksCollection[i].href + '<br>';
+        
+        // Display the link text (the text inside the anchor tag)
+        divDisplay.innerHTML += "Link Text: " + linksCollection[i].textContent + '<br>';
+      }
+    }
+  </script>
+</body>
+</html>

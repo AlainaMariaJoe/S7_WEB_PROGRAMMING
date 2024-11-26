@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Absolute Position Example</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    .box1 {
+      background-color: red;
+    }
+
+    .box2 {
+      background-color: blue;
+      position: absolute;
+      top: 30px;  /* 50px from the top of the page */
+      left: 50px;
+    }
+
+    .box3 {
+      background-color: green;
+    }
+
+    .floating-box {
+      position: absolute;
+      top: 150px;  /* 50px from the top of the page */
+      left: 50px;  /* 50px from the left of the page */
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box1">Box 1</div>
+  <div class="floating-box">Floating Box</div>
+  <div class="box2">Box 2</div>
+  <div class="box3">Box 3</div>
+
+</body>
+</html>

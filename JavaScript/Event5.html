@@ -1,0 +1,16 @@
+<form name="f1">
+    Enter your phone number:
+    <input type="text" name="phone" onchange="valphone()">
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+function valphone() {
+    var phone = document.f1.phone.value;
+    if (phone !== "" && isNaN(phone)) {
+        window.alert("Please enter only numbers for the phone number.");
+    } else {
+        window.alert("Valid phone number!");
+    }
+}
+</script>

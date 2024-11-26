@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if...else if...else Statement Example</title>
+</head>
+<body>
+    <h2>Check Weather</h2>
+    <button onclick="checkWeather(25)">Check Weather 25°C</button>
+    <p id="weatherCheck"></p>
+
+    <script type="text/javascript">
+        function checkWeather(temp) {
+            if (temp > 30) {
+                document.getElementById("weatherCheck").innerHTML = "It's a hot day!";
+            } else if (temp > 20) {
+                document.getElementById("weatherCheck").innerHTML = "It's a nice day!";
+            } else {
+                document.getElementById("weatherCheck").innerHTML = "It's cold today!";
+            }
+        }
+    </script>
+</body>
+</html>

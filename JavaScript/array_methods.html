@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Methods</title>
+</head>
+<body>
+    <h2>JavaScript Array Methods </h2>
+    <p id="demo"></p>
+
+    <script>
+        var fruits = ["Apple", "Banana", "Mango", "Orange"];
+        var output = ""; 
+
+        output += "Original Array: " + fruits.join(", ") + "<br>";
+
+        // 1.Adding an element (push)
+        fruits.push("Grapes");
+        output += "After Push (Adding Grapes): " + fruits.join(", ") + "<br>";
+
+        // 2.Removing the last element (pop)
+        fruits.pop();
+        output += "After Pop (Removing Last Element): " + fruits.join(", ") + "<br>";
+
+        // 3.Removing the first element (shift)
+        fruits.shift();
+        output += "After Shift (Removing First Element): " + fruits.join(", ") + "<br>";
+
+        // 4.Adding an element at the beginning (unshift)
+        fruits.unshift("Pineapple");
+        output += "After Unshift (Adding Pineapple): " + fruits.join(", ") + "<br>";
+
+        // 5.Sorting the array
+        fruits.sort();
+        output += "After Sort: " + fruits.join(", ") + "<br>";
+
+        // 6.Reversing the array
+        fruits.reverse();
+        output += "After Reverse: " + fruits.join(", ") + "<br>";
+
+        // 7.Splicing: Adding two elements at index 2
+        fruits.splice(2, 0, "Kiwi", "Strawberry");
+        output += "After Splice (Adding Kiwi and Strawberry): " + fruits.join(", ") + "<br>";
+
+        // 8.Slicing: Extracting elements from index 1 to 3
+        var slicedFruits = fruits.slice(1, 4);
+        output += "Sliced Array (index 1 to 3): " + slicedFruits.join(", ") + "<br>";
+
+        // 9.Concatenating with another array
+        var vegetables = ["Carrot", "Potato"];
+        var combined = fruits.concat(vegetables);
+        output += "After Concatenation with Vegetables: " + combined.join(", ") + "<br>";
+
+        
+        document.getElementById("demo").innerHTML = output;
+    </script>
+</body>
+</html>

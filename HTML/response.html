@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Query Example</title>
+  <style>
+    /* Default styles (apply to all devices) */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      background-color: white; /* Default */
+    }
+
+    /* Small screens (<576px) */
+    @media (max-width: 575px) {
+      body {
+        background-color: lightblue;
+        font-size: 14px;
+      }
+    }
+
+    /* Medium screens (576px–767px) */
+    @media (min-width: 576px) and (max-width: 767px) {
+      body {
+        background-color: lightgreen;
+        font-size: 16px;
+      }
+    }
+
+    /* Large screens (≥768px) */
+    @media (min-width: 768px) {
+      body {
+        background-color: lavender;
+        font-size: 18px;
+      }
+    }
+
+    /* Orientation-specific styles */
+    @media (orientation: landscape) {
+      body {
+        border: 5px solid black;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Design with Media Queries</h1>
+  <p>Resize the window or change orientation to see the effect!</p>
+</body>
+</html>

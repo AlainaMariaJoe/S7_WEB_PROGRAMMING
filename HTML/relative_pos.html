@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Relative Positioning Example</title>
+  <style>
+    /* Basic styling for the box */
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 100px;
+      border: 2px solid black;
+    }
+
+    /* Using relative positioning to shift the box */
+    .shifted-box {
+      position: relative;
+      top: 20px;   /* Move the box down 20px */
+      left: 30px;  /* Move the box right 30px */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Box 1 will be in normal position -->
+  <div class="box">Box 1</div>
+
+  <!-- Box 2 will be shifted -->
+  <div class="box shifted-box">Box 2</div>
+
+  <!-- Box 3 will be in normal position -->
+  <div class="box">Box 3</div>
+
+</body>
+</html>

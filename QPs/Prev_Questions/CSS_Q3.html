@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Styling Example</title>
+  <style>
+    /* i. Set the background color for the hover and active link states to "green" */
+    a:hover, a:active {
+      background-color: yellow;
+    }
+
+    /* ii. Set the list style for unordered lists to "square" */
+    ul {
+      list-style-type: square;
+    }
+
+    /* iii. Set "Flower.png" as the background image of the page */
+    body {
+      background-image: url('Flower.png');
+      background-size: contain; 
+      background-position: center; 
+      background-repeat: no-repeat;
+    }
+
+    /* iv. Set dashed border for left and right and double border for top & bottom of a table with 2 rows */
+    table {
+      border-left: 2px dashed red;
+      border-right: 2px dashed red;
+      border-top: 3px double blueviolet;
+      border-bottom: 3px double blueviolet;
+      width: 50%; 
+      margin: 20px auto; 
+      
+    }
+
+    /* Optional: Style for table rows and cells */
+    td, th {
+      padding: 5px;
+      text-align: center;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Styling Example</h1>
+
+  <p><a href="#">Hover and Active Link</a></p>
+
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <table>
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+    </tr>
+    <tr>
+      <td>Row 1, Cell 1</td>
+      <td>Row 1, Cell 2</td>
+    </tr>
+    <tr>
+      <td>Row 2, Cell 1</td>
+      <td>Row 2, Cell 2</td>
+    </tr>
+  </table>
+</body>
+</html>

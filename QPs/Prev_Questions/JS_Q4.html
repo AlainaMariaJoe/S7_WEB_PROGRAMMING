@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Calculation</title>
+    <style>
+        /* Styling for the result */
+        #result {
+            font-weight: 400;
+            color: green;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Factorial of a Number</h2>
+    <p id="result"></p>
+
+    <script>
+        // Function to calculate factorial of a number
+        function calculateFactorial(n) {
+            // Base case: 0! or 1! is 1
+            if (n === 0 || n === 1) {
+                return 1;
+            }
+            // Recursive case: n! = n * (n-1)!
+            return n * calculateFactorial(n - 1);
+        }
+
+        // Prompt user to enter a number
+        let number = prompt("Please enter a number to find its factorial:");
+
+        // Convert the input to a number
+        number = parseInt(number);
+
+        // Check if the input is a valid number
+        if (isNaN(number) || number < 0) {
+            // If input is not a valid number or less than 0, show an error message
+            alert("Please enter a valid non-negative number.");
+        } else {
+            // Calculate the factorial
+            let factorial = calculateFactorial(number);
+
+            // Display the result with styling
+            document.getElementById("result").innerHTML = "Factorial of " + number + " is: " + factorial;
+        }
+    </script>
+</body>
+</html>

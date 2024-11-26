@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Example</title>
+</head>
+<body>
+
+    <h2>Roll a Die!</h2>
+    <button onclick="rollDie()">Roll</button>
+    <p id="randomResult"></p>
+
+    <script type="text/javascript">
+        // Function to generate a random number between 1 and 6 (inclusive)
+        function rollDie() {
+            // Generate a random integer between 1 and 6
+            let randomValue = Math.floor(1 + Math.random() * 6);
+
+            // Display the result in the HTML
+            document.getElementById("randomResult").innerHTML = "You rolled a: " + randomValue;
+        }
+    </script>
+
+</body>
+</html>

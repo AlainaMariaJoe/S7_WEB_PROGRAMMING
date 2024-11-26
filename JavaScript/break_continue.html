@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break and continue Statements</title>
+</head>
+<body>
+    <h2>Break and Continue Example</h2>
+    <button onclick="breakContinue()">Run break/continue</button>
+    <p id="breakContinue"></p>
+
+    <script type="text/javascript">
+        function breakContinue() {
+            let result = "";
+            for (let i = 0; i < 10; i++) {
+                if (i === 3) {
+                    continue; // Skip number 3
+                }
+                if (i === 7) {
+                    break; // Exit the loop when reaching 7
+                }
+                result += "The number is " + i + "<br>";
+            }
+            document.getElementById("breakContinue").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

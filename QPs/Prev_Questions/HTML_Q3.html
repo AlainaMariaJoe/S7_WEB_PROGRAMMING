@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks List</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        caption {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align:center;">Student Marks List</h1>
+
+    <!-- Form for submitting the data -->
+    <form action="submit_marks.php" method="POST">
+        <table>
+            <caption>Mark Entry Table</caption>
+            <tr>
+                <th>Student Name</th>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="student1" placeholder="Enter Name" required></td>
+                <td><input type="text" name="subject1" placeholder="Enter Subject" required></td>
+                <td><input type="number" name="marks1" placeholder="Enter Marks" required></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="student2" placeholder="Enter Name" required></td>
+                <td><input type="text" name="subject2" placeholder="Enter Subject" required></td>
+                <td><input type="number" name="marks2" placeholder="Enter Marks" required></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="student3" placeholder="Enter Name" required></td>
+                <td><input type="text" name="subject3" placeholder="Enter Subject" required></td>
+                <td><input type="number" name="marks3" placeholder="Enter Marks" required></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="student4" placeholder="Enter Name" required></td>
+                <td><input type="text" name="subject4" placeholder="Enter Subject" required></td>
+                <td><input type="number" name="marks4" placeholder="Enter Marks" required></td>
+            </tr>
+        </table>
+
+        <!-- Submit Button -->
+        <div style="text-align: center; margin-top: 20px;">
+            <input type="submit" value="Submit Marks">
+        </div>
+    </form>
+
+</body>
+</html>

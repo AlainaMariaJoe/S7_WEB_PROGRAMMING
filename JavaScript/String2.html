@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Properties and Methods</title>
+    <script type="text/javascript">
+        function demonstrateStringMethods() {
+            var str = "George";
+            
+            // 1. length property
+            var len = str.length;
+            document.getElementById("length").innerHTML = "Length of the string: " + len;
+
+            // 2. charAt(position)
+            var charAtPosition = str.charAt(3);
+            document.getElementById("charAt").innerHTML = "Character at position 3: " + charAtPosition;
+
+            // 3. indexOf(string)
+            var indexOfChar = str.indexOf('o');
+            document.getElementById("indexOf").innerHTML = "Index of 'o': " + indexOfChar;
+
+            // 4. substring(from, to)
+            var substringExample = str.substring(2, 4);
+            document.getElementById("substring").innerHTML = "Substring from position 2 to 4: " + substringExample;
+
+            // 5. toLowerCase()
+            var lowerCaseStr = str.toLowerCase();
+            document.getElementById("toLowerCase").innerHTML = "String in lowercase: " + lowerCaseStr;
+        }
+    </script>
+</head>
+<body onload="demonstrateStringMethods()">
+    <h2>String Methods Example</h2>
+    <p id="length"></p>
+    <p id="charAt"></p>
+    <p id="indexOf"></p>
+    <p id="substring"></p>
+    <p id="toLowerCase"></p>
+</body>
+</html>

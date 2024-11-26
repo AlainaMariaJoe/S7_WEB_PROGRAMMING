@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for...in Loop Example</title>
+</head>
+<body>
+    <h2>Car Details</h2>
+    <button onclick="showCarDetails()">Show Car Details</button>
+    <p id="carDetails"></p>
+
+    <script type="text/javascript">
+        function showCarDetails() {
+            const car = {
+                make: "Toyota",
+                model: "Corolla",
+                year: 2020
+            };
+
+            let details = "";
+            for (let x in car) {
+                details += x + ": " + car[x] + "<br>";
+            }
+
+            document.getElementById("carDetails").innerHTML = details;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector Example</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the DOM Manipulation Example</h1>
+
+    <p class="info">This is a paragraph with the class "info".</p>
+    <p class="info">This is another paragraph with the class "info".</p>
+    <p id="specialParagraph">This paragraph will be changed by querySelector.</p>
+    
+    <button onclick="changeText()">Change Text</button>
+
+    <script>
+        function changeText() {
+            // Find the first element with the class 'info' using querySelector
+            var element = document.querySelector(".info");
+            
+            // Change the text content of the selected element
+            element.innerHTML = "This text has been changed using querySelector!";
+            
+            // Also add a class to the element to change its style
+            element.classList.add("highlight");
+
+            // Find the element by its id
+            var specialElement = document.querySelector("#specialParagraph");
+
+            // Change the content of the element with id 'specialParagraph'
+            specialElement.innerHTML = "This is the special paragraph, modified by querySelector!";
+        }
+    </script>
+</body>
+</html>

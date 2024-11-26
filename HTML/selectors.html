@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CSS Selectors Example</title>
+  <style>
+    /* Simple selector */
+    h1, h3 { font-size: 24pt; }
+    h2 { font-size: 20pt; }
+
+    /* Class selector */
+    p.ques { font-size: 16px; color: blue; }
+    p.ans { font-size: 14px; color: green; }
+
+    /* Generic class selector */
+    .really-big {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    /* Id selector */
+    #section14 { font-size: 20pt; color: red; }
+
+    /* Universal selector */
+    * { margin: 0; padding: 0; }
+
+    /* Pseudo-classes */
+    a:link { color: blue; }
+    a:visited { color: green; }
+    a:hover { color: red; font-weight: bold; }
+    a:active { color: yellow; }
+  </style>
+</head>
+<body>
+  <h1 class="really-big">Welcome to the CSS Selector Demo!</h1>
+  <h2 id="section14">Section 14: CSS Basics</h2>
+  <p class="ques">What is CSS?</p>
+  <p class="ans">CSS stands for Cascading Style Sheets.</p>
+  <a href="#">Click here</a>
+  <p class="really-big">This is a large paragraph styled with a generic class.</p>
+  <p class="really-big">Another paragraph with the same style.</p>
+</body>
+</html>

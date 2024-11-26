@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Handler Example</title>
+  <style>
+    #message {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Event Handler Example</h2>
+  <p id="message">Welcome</p>
+  
+
+  <button id="changeButton">Click</button>
+  
+  <script>
+    // Method 1: Using the HTML onclick attribute (Inline approach)
+    document.getElementById("changeButton").onclick = function() {
+      changeMessage();
+    };
+    
+    // Method 2: Using JavaScript DOM method addEventListener (Preferred approach)
+
+    document.getElementById("changeButton").addEventListener("click", function() {
+      changeMessage();
+    });
+
+    function changeMessage() {
+  
+      const messageParagraph = document.getElementById("message");
+      messageParagraph.innerHTML = "<b>Hello from JavaScript</b>"; 
+    }
+  </script>
+
+</body>
+</html>

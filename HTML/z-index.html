@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>z-index Example</title>
+  <style>
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      z-index: 1;  /* Red box will be behind */
+    }
+
+    .box2 {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      position: absolute;
+      top: 70px;
+      left: 70px;
+      z-index: 2;  /* Blue box will be on top */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box1"></div>
+  <div class="box2"></div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dropdown Example</title>
+  <style>
+    /* Navbar styling */
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      position: relative; /* Make navbar the reference point for positioning */
+    }
+
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    /* Dropdown container (the parent element) */
+    .dropdown {
+      position: relative; /* Positioning context for the dropdown */
+      display: inline-block; /* Make the dropdown appear alongside other items in the navbar */
+    }
+
+    /* Dropdown content (the menu that appears) */
+    .dropdown-content {
+      display: none; /* Hide dropdown content by default */
+      position: absolute; /* Position it absolutely within the dropdown container */
+      background-color: #f1f1f1;
+      min-width: 160px;
+      z-index: 1; /* Ensure it appears on top of other content */
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Show the dropdown content when hovering over the dropdown */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+
+    <!-- Dropdown menu -->
+    <div class="dropdown">
+      <a href="javascript:void(0)">More</a>
+      <div class="dropdown-content">
+        <a href="#">Option 1</a>
+        <a href="#">Option 2</a>
+        <a href="#">Option 3</a>
+      </div>
+    </div>
+
+    <a href="#contact">Contact</a>
+  </div>
+
+</body>
+</html>

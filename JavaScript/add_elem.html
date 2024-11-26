@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h2>JavaScript HTML DOM</h2>
+    <p>Add a new HTML Element before another element.</p>
+    <div id="div1">
+        <p id="p1">This is a paragraph.</p>
+        <p id="p2">This is another paragraph.</p>
+    </div>
+    <script>
+        // Create a new <p> element
+        const para = document.createElement("p");
+
+        // Create a text node and append it to the <p> element
+        const node = document.createTextNode("This is new.");
+        para.appendChild(node);
+
+        // Get the existing <p> element (p1)
+        const child = document.getElementById("p1");
+
+        // Insert the new <p> before the existing <p> element
+        document.getElementById("div1").insertBefore(para, child);
+    </script>
+</body>
+</html>

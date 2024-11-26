@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Check</title>
+</head>
+<body>
+
+<h2>Check if a number is prime</h2>
+
+<input type="number" id="num" placeholder="Enter a number">
+<button onclick="checkPrime()">Check</button>
+
+<p id="result"></p>
+
+<script>
+    // Add the JavaScript function code here
+    function checkPrime() {
+        var num = document.getElementById("num").value;
+        var result = document.getElementById("result");
+        var isPrime = true; // Assume it's prime unless proven otherwise
+        
+        // Check if num is less than 2 (1 and negative numbers are not prime)
+        if (num <= 1) {
+            result.innerHTML = num + " is not a prime number.";
+            return;
+        }
+
+        // Loop to check divisibility from 2 to num-1
+        for (var i = 2; i < num; i++) {
+            if (num % i === 0) {
+                isPrime = false; // Set to false if divisible by any number
+                break; // No need to continue checking further
+            }
+        }
+
+        // Print the result based on the value of isPrime
+        if (isPrime) {
+            result.innerHTML = num + " is a prime number.";
+        } else {
+            result.innerHTML = num + " is not a prime number.";
+        }
+    }
+</script>
+
+</body>
+</html>

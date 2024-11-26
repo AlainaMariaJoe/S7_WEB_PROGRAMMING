@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Searching Website</title>
+    <style>
+        .clear-btn {
+            cursor: pointer;
+            color: red;
+            font-size: 20px;
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .search-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        input[type="text"] {
+            padding-right: 30px; /* Space for the X button */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Image Searching Website</h1>
+
+    <!-- Search Bar Section -->
+    <div>
+        <label for="search">Search your Image here: </label>
+        <div class="search-container">
+            <input type="text" id="search" name="search" placeholder="Kung Fu Panda">
+            <button class="clear-btn" onclick="document.getElementById('search').value = ''">X</button>
+        </div>
+        <button>Search</button>
+    </div>
+
+    <p>For more slick <a href="#">click here</a></p>
+
+    <!-- Feedback Form Section -->
+    <h2>Feedback Form</h2>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="date">Date:</label>
+        <input type="text" id="date" name="date" placeholder="mm/dd/yyyy" required><br>
+
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" required></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
